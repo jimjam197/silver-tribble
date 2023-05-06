@@ -1,4 +1,5 @@
-.container {  display: grid;
+.container {
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 0px 0px;
@@ -13,34 +14,41 @@
     ". final-answer ."
     ". bet ."
     "footer footer footer";
-    background-color: #060ee9cb ;
+  background-color: #060ee9cb;
 }
 
-.footer { grid-area: footer;
+.footer {
+  grid-area: footer;
   display: grid;
-  display: grid; border-style: solid;
+  display: grid;
+  border-style: solid;
   border-color: #FFCC00;
   border-width: 2px;
   justify-content: center;
 }
 
-.header { grid-area: header; 
+.header {
+  grid-area: header;
   display: grid;
-  display: grid; border-style: solid;
+  display: grid;
+  border-style: solid;
   border-color: #FFCC00;
   border-width: 2px;
   justify-content: center;
 }
 
-.Player-turn { grid-area: Player-turn; 
+.Player-turn {
+  grid-area: Player-turn;
   display: grid;
-  display: grid; border-style: solid;
+  display: grid;
+  border-style: solid;
   border-color: #FFCC00;
   border-width: 2px;
   justify-content: center;
 }
 
-.bet {  display: grid;
+.bet {
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 0px 0px;
@@ -52,39 +60,48 @@
   grid-area: bet;
 }
 
-.bet-here { grid-area: bet-here;
+.bet-here {
+  grid-area: bet-here;
   display: grid;
-  display: grid; border-style: solid;
-  border-color: #FFCC00;
-  border-width: 2px;
-  justify-content: center;
- }
-
-.final-answer { grid-area: final-answer; 
   display: grid;
-  display: grid; border-style: solid;
+  border-style: solid;
   border-color: #FFCC00;
   border-width: 2px;
   justify-content: center;
 }
 
-.bet-amount { grid-area: bet-amount;
+.final-answer {
+  grid-area: final-answer;
   display: grid;
-  display: grid; border-style: solid;
+  display: grid;
+  border-style: solid;
   border-color: #FFCC00;
   border-width: 2px;
   justify-content: center;
 }
 
-.final-cat { grid-area: final-cat;
+.bet-amount {
+  grid-area: bet-amount;
   display: grid;
-  display: grid; border-style: solid;
+  display: grid;
+  border-style: solid;
   border-color: #FFCC00;
   border-width: 2px;
   justify-content: center;
 }
 
-.final-question {  display: grid;
+.final-cat {
+  grid-area: final-cat;
+  display: grid;
+  display: grid;
+  border-style: solid;
+  border-color: #FFCC00;
+  border-width: 2px;
+  justify-content: center;
+}
+
+.final-question {
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 0px 0px;
@@ -95,20 +112,28 @@
     ". . .";
   grid-area: final-question;
   display: grid;
-  display: grid; border-style: solid;
+  display: grid;
+  border-style: solid;
   border-color: #FFCC00;
   border-width: 2px;
   justify-content: center;
 }
 
-.Final-q { grid-area: Final-q;
+.Final-q {
+  grid-area: Final-q;
 
   display: grid;
-  display: grid; border-style: solid;
+  display: grid;
+  border-style: solid;
   border-color: #FFCC00;
   border-width: 2px;
-  justify-content: center;}
+  justify-content: center;
+}
 
-h1, h2, h3, p, a{
+h1,
+h2,
+h3,
+p,
+a {
   color: #FFCC00;
 }
