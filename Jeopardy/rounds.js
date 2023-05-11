@@ -106,7 +106,7 @@ export default [
         answer: "Mirror Image",
       },
       500: {
-        category: "Animals",
+        category: "Spells",
         question: "What spell allows a spellcaster to summon a powerful, undead creature to fight for them?",
         answer: "Create Undead",
       }
