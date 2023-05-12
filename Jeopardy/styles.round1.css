@@ -208,7 +208,7 @@
   justify-content: center;
 }
 
-.cat-1-c-collom-1 {
+.cat-1-collom-1 {
   grid-area: cat-1-c-collom-1;
   display: grid;
   display: grid;
@@ -239,7 +239,7 @@
 }
 
 .cat-1collom-4 {
-  grid-area: cat-1collom-4;
+  grid-area: cat-1-collom-4;
   display: grid;
   display: grid;
   border-style: solid;

@@ -14,7 +14,7 @@
   <div class="container">
     <div class="header">
       <p>
-      <h1>D&D Jeopardy Round 1</h1> <!-- Heading for the page -->
+      <h1>D&D Jeopardy Round <span id="round-num">1</span></h1> <!-- Heading for the page -->
       </p>
     </div>
     <div class="player-turn">
@@ -47,119 +47,43 @@
         <p>input</p> <!-- Input field for the answer -->
       </div>
     </div>
-    <div class="main-game">
-      <div class="cat-1">
-        <p>Classes and Races</p> <!-- Category 1 name -->
-      </div>
-      <div class="cat-2">
-        <p>Spells</p> <!-- Category 2 name -->
-      </div>
-      <div class="cat-3">
-        <p>Monsters and Creatures</p> <!-- Category 3 name -->
-      </div>
-      <div class="cat-4">
-        <p>Lore and History</p> <!-- Category 4 name -->
-      </div>
-      <div class="cat-5">
-        <p>Magic Items</p> <!-- Category 5 name -->
-      </div>
-      <div class="cat-6">
-        <p>D&D Settings</p> <!-- Category 6 name -->
-      </div>
-      <!-- Questions for category 1 -->
-      <div class="cat-1-collom-1">
-        <p>100</p> <!-- Value of category 1, question 1 -->
-      </div>
-
-      <div class="cat-1-collom-2">
-        <p>200</p> <!-- Value of category 1, question 2 -->
-      </div>
-      <div class="cat-1-collom-3">
-        <p>300</p> <!-- Value of category 1, question 3 -->
-      </div>
-      <div class="cat-1-collom-4">
-        <p>400</p> <!-- Value of category 1, question 4 -->
-      </div>
-      <div class="cat-1-collom-5">
-        <p>500</p> <!-- Value of category 1, question 5 -->
-      </div>
-
-      <!-- Questions for category 2 -->
-      <div class="cat-2-collom-5">
-        <p>500</p> <!-- Value of category 2 , question 5 -->
-      </div>
-      <div class="cat-3-collom-5">
-        <p>300</p> <!-- Value of category 3 , question 5 -->
-      </div>
-      <div class="cat-4-collom-5">
-        <p>500</p> <!-- Value of category 4 , question 5 -->
-      </div>
-      <div class="cat-5-collom-5">
-        <p>500</p> <!-- Value of category 5 , question 5 -->
-      </div>
-      <div class="cat-6-collom-5">
-        <p>500</p> <!-- Value of category 6 , question 5 -->
-      </div>
-      <div class="cat-6-collom-4">
-        <p>400</p> <!-- Value of category 6 , question 4 -->
-      </div>
-      <div class="cat-5-collom4">
-        <p>400</p> <!-- Value of category 5 , question 4 -->
-      </div>
-      <div class="cat-4-collom-4">
-        <p>400</p> <!-- Value of category 4 , question 4 -->
-      </div>
-      <div class="cat-3-collom-4">
-        <p>400</p> <!-- Value of category 3 , question 4 -->
-      </div>
-      <div class="cat-2-collom4">
-        <p>400</p> <!-- Value of category 2 , question 4 -->
-      </div>
-      <div class="cat-2-collom3">
-        <p>300</p> <!-- Value of category 2 , question 3 -->
-      </div>
-      <div class="cat-3-collom-3">
-        <p>300</p> <!-- Value of category 3 , question 3 -->
-      </div>
-      <div class="cat-4-collom-3">
-        <p>300</p> <!-- Value of category 4 , question 3 -->
-      </div>
-      <div class="cat-5-collom-3">
-        <p>300</p> <!-- Value of category 5 , question 3 -->
-      </div>
-      <div class="cat-6-collom-3">
-        <p>300</p> <!-- Value of category 6 , question 3 -->
-      </div>
-      <div class="cat-2-collom-2">
-        <p>200</p> <!-- Value of category 2 , question 2 -->
-      </div>
-      <div class="cat-3-collom-2">
-        <p>200</p> <!-- Value of category 3 , question 2 -->
-      </div>
-      <div class="cat-4-collom-2">
-        <p>200</p> <!-- Value of category 4 , question 2 -->
-      </div>
-      <div class="cat-5-collom-2">
-        <p>200</p> <!-- Value of category 6 , question 2 -->
-      </div>
-      <div class="cat-6-collom-2">
-        <p>200</p> <!-- Value of category 6 , question 2 -->
-      </div>
-      <div class="cat-2-colom-1">
-        <p>100</p> <!-- Value of category 2, question 1 -->
-      </div>
-      <div class="cat-3-collom-1">
-        <p>100</p> <!-- Value of category 3, question 1 -->
-      </div>
-      <div class="cat-4-collom4">
-        <p>400</p> <!-- Value of category 4, question 1 -->
-      </div>
-      <div class="cat-5-collom-1">
-        <p>100</p> <!-- Value of category 5, question 1 -->
-      </div>
-      <div class="cat-6-collom-1">
-        <p>100</p> <!-- Value of category 6, question 1 -->
-      </div>
+    <div class="grid-container">
+      <div class="grid-item">Classes and Races</div>
+      <div class="grid-item">Spells</div>
+      <div class="grid-item">Monsters and Creatures</div>  
+      <div class="grid-item">Lore and History</div>
+      <div class="grid-item">Magic Items</div>
+      <div class="grid-item">D&D Settings</div>  
+      <div class="grid-item q r1 c1">100</div>
+      <div class="grid-item q r1 c2">100</div>
+      <div class="grid-item q r1 c3">100</div>
+      <div class="grid-item q r1 c4">100</div>
+      <div class="grid-item q r1 c5">100</div>
+      <div class="grid-item q r1 c6">100</div>  
+      <div class="grid-item q r2 c1">200</div>
+      <div class="grid-item q r2 c2">200</div>
+      <div class="grid-item q r2 c3">200</div>  
+      <div class="grid-item q r2 c4">200</div>
+      <div class="grid-item q r2 c5">200</div>
+      <div class="grid-item q r2 c6">200</div> 
+      <div class="grid-item q r3 c1">300</div>
+      <div class="grid-item q r3 c2">300</div>
+      <div class="grid-item q r3 c3">300</div>  
+      <div class="grid-item q r3 c4">300</div>
+      <div class="grid-item q r3 c5">300</div>
+      <div class="grid-item q r3 c6">300</div>  
+      <div class="grid-item q r4 c1">400</div>
+      <div class="grid-item q r4 c2">400</div>
+      <div class="grid-item q r4 c3">400</div>  
+      <div class="grid-item q r4 c4">400</div>
+      <div class="grid-item q r4 c5">400</div>
+      <div class="grid-item q r4 c6">400</div>
+      <div class="grid-item q r5 c1">500</div>
+      <div class="grid-item q r5 c2">500</div>
+      <div class="grid-item q r5 c3">500</div>  
+      <div class="grid-item q r5 c4">500</div>
+      <div class="grid-item q r5 c5">500</div>
+      <div class="grid-item q r5 c6">500</div>
     </div>
   </div>
 
