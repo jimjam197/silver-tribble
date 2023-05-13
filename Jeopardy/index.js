@@ -1,5 +1,5 @@
 import qs from './qs_rounds.js'
-// import qs from './qs_original.js'
+// import qs from './qs_rounds.js
 
 for (let i = 1; i < 6; i++) {
     for (const div of document.querySelectorAll(`.r${i}`)) {
@@ -14,7 +14,7 @@ for (let i = 1; i < 6; i++) {
       const round = document.getElementById('round-num').innerText
 div.addEventListener('click', () => {
     // is telling the webpage to wait and listen for someone to click the div element
-    const qObj = qs[parseInt(j) - 1][parseInt(round) - 1][i.toString() + '00']//is telling the computer to go and find some info and turning the string into a number and adding 00 to the end
+    const qObj = qs[parseInt(j) - 1][parseInt(round) - 1][i.toString() + '00']//This tells the computer to convert strings into numbers and mnus 1 from each and then adding 00 to the end of it
     console.log(qObj)//overall its sayying find me this info and show it when clicked on the element
 })
 }
