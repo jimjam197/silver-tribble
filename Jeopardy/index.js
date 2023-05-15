@@ -18,26 +18,32 @@ for (let i = 1; i < 6; i++) {
             console.log(qObj)//overall its sayying find me this info and show it when clicked on the element
 
             const modal = document.getElementById(`modal-r${i}c${j}`)
-            modal.style.display=`block`
+            modal.style.display = `block`
+
+            // Get the <span> element that closes the modal
+            let span = document.getElementsByClassName("close")[0];
+
+            // Get the button that opens the modal for this specific iteration of the loop
+            let btn = modal.querySelector("#submit-r1c1");
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
         })
     }
 }
 
-// Get the modal
-let modal = document.getElementById("myModal");
-// Get the <span> element that closes the modal
-let span = document.getElementsByClassName("close")[0];
-// When the user clicks on the button, open the modal
-btn.onclick = function () {
-    modal.style.display = "block";
-}
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-    modal.style.display = "none";
-}
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
