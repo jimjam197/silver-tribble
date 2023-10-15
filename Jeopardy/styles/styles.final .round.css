@@ -22,7 +22,7 @@
   display: grid;
   display: grid;
   border-style: solid;
-  border-color: #FFCC00;
+  border-color: #ffcc00;
   border-width: 2px;
   justify-content: center;
 }
@@ -32,7 +32,7 @@
   display: grid;
   display: grid;
   border-style: solid;
-  border-color: #FFCC00;
+  border-color: #ffcc00;
   border-width: 2px;
   justify-content: center;
 }
@@ -42,7 +42,7 @@
   display: grid;
   display: grid;
   border-style: solid;
-  border-color: #FFCC00;
+  border-color: #ffcc00;
   border-width: 2px;
   justify-content: center;
 }
@@ -65,7 +65,7 @@
   display: grid;
   display: grid;
   border-style: solid;
-  border-color: #FFCC00;
+  border-color: #ffcc00;
   border-width: 2px;
   justify-content: center;
 }
@@ -75,7 +75,7 @@
   display: grid;
   display: grid;
   border-style: solid;
-  border-color: #FFCC00;
+  border-color: #ffcc00;
   border-width: 2px;
   justify-content: center;
 }
@@ -85,7 +85,7 @@
   display: grid;
   display: grid;
   border-style: solid;
-  border-color: #FFCC00;
+  border-color: #ffcc00;
   border-width: 2px;
   justify-content: center;
 }
@@ -95,7 +95,7 @@
   display: grid;
   display: grid;
   border-style: solid;
-  border-color: #FFCC00;
+  border-color: #ffcc00;
   border-width: 2px;
   justify-content: center;
 }
@@ -114,7 +114,7 @@
   display: grid;
   display: grid;
   border-style: solid;
-  border-color: #FFCC00;
+  border-color: #ffcc00;
   border-width: 2px;
   justify-content: center;
 }
@@ -125,7 +125,7 @@
   display: grid;
   display: grid;
   border-style: solid;
-  border-color: #FFCC00;
+  border-color: #ffcc00;
   border-width: 2px;
   justify-content: center;
 }
@@ -135,5 +135,5 @@ h2,
 h3,
 p,
 a {
-  color: #FFCC00;
+  color: #ffcc00;
 }

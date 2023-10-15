@@ -11,7 +11,7 @@
     ". play ."
     ". . ."
     "footer footer footer";
-  background-color: #060CE9;
+  background-color: #060ce9;
 }
 
 .header {
@@ -20,7 +20,7 @@
   justify-content: center;
   display: grid;
   border-style: solid;
-  border-color: #FFCC00;
+  border-color: #ffcc00;
   border-width: 3px;
   background-color: #060ee9e3;
 }
@@ -30,7 +30,7 @@
   display: grid;
   justify-content: center;
   border-style: solid;
-  border-color: #FFCC00;
+  border-color: #ffcc00;
   border-width: 3px;
   background-color: #060ee9e3;
 }
@@ -39,7 +39,7 @@
   grid-area: image;
   display: grid;
   border-style: solid;
-  border-color: #FFCC00;
+  border-color: #ffcc00;
   border-width: 2px;
   justify-content: center;
 }
@@ -55,18 +55,16 @@
     ". play-here ."
     ". . .";
   grid-area: play;
-
 }
 
 .play-here {
   grid-area: play-here;
   display: grid;
-
 }
 
 h1,
 p,
 h3 {
-  color: #FFCC00;
+  color: #ffcc00;
   display: justify;
 }

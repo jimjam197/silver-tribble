@@ -1,15 +1,14 @@
-
 .grid-container {
   display: grid;
   grid-template-columns: repeat(6, auto);
-  background-color: #060CE9;
-  border-color: #FFCC00;
+  background-color: #060ce9;
+  border-color: #ffcc00;
   padding: 10px;
 }
 
 .grid-item {
-  background-color: #060CE9;
-  border: 1px solid #FFCC00;
+  background-color: #060ce9;
+  border: 1px solid #ffcc00;
   padding: 20px;
   font-size: 30px;
   text-align: center;
@@ -25,8 +24,8 @@
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
@@ -34,7 +33,7 @@
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
-  border: 1px solid #060CE9;
+  border: 1px solid #060ce9;
   width: 80%; /* Could be more or less, depending on screen size */
 }
 
@@ -60,7 +59,9 @@
 }
 
 /* Modal Body */
-.modal-body {padding: 2px 16px;}
+.modal-body {
+  padding: 2px 16px;
+}
 
 /* Modal Footer */
 .modal-footer {
@@ -77,15 +78,21 @@
   padding: 0;
   border: 1px solid #888;
   width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   animation-name: animatetop;
-  animation-duration: 0.4s
+  animation-duration: 0.4s;
 }
 
 /* Add Animation */
 @keyframes animatetop {
-  from {top: -300px; opacity: 0}
-  to {top: 0; opacity: 1}
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 h1,
@@ -93,5 +100,5 @@ h2,
 h3,
 p,
 a {
-  color: #FFCC00;
+  color: #ffcc00;
 }
