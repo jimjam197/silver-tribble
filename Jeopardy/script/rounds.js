@@ -1,4 +1,4 @@
-export default [
+export const qs = [
   [
     {
       100: {
@@ -396,4 +396,3 @@ export default [
   },
 ];
 
-module.exports = rounds;

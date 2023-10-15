@@ -1,5 +1,4 @@
-const qs = require("./rounds.js");
-
+import { qs } from "./rounds.js";
 let player1Name = "";
 let player2Name = "";
 let currentPlayer = player1Name;
@@ -29,17 +28,19 @@ for (let i = 0; i < 5; i++) {
   }
 }
 
-for (let i = 1; i <= 5; i++) {
-  for (let j = 1; j <= 6; j++) {
-    const gridItem = document.querySelector(`.q.r${i}.c${j}`);
-    gridItem.addEventListener("click", () => {
-      if (!selectedQuestions[i - 1][j - 1]) {
-        selectedQuestions[i - 1][j - 1] = true;
-        displayQuestion(i, j);
-      }
-    });
+document.addEventListener("DOMContentLoaded", function () {
+  for (let i = 1; i <= 5; i++) {
+    for (let j = 1; j <= 6; j++) {
+      const gridItem = document.querySelector(`.q.r${i}.c${j}`);
+      gridItem.addEventListener("click", () => {
+        if (!selectedQuestions[i - 1][j - 1]) {
+          selectedQuestions[i - 1][j - 1] = true;
+          displayQuestion(i, j);
+        }
+      });
+    }
   }
-}
+});
 
 function closeModal(modalId) {
   const modal = document.getElementById(modalId);
