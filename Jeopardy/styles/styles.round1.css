@@ -1,17 +1,20 @@
+/* Grid Container for Rounds */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(6, auto);
   background-color: #060ce9;
-  border-color: #ffcc00;
+  border: 1px solid #ffcc00;
   padding: 10px;
 }
 
+/* Grid Item for Questions */
 .grid-item {
   background-color: #060ce9;
   border: 1px solid #ffcc00;
   padding: 20px;
   font-size: 30px;
   text-align: center;
+  cursor: pointer; /* Add pointer cursor for clickable items */
 }
 
 /* The Modal (background) */
@@ -24,17 +27,16 @@
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15% auto;
   padding: 20px;
   border: 1px solid #060ce9;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 80%;
 }
 
 /* The Close Button */
@@ -51,6 +53,7 @@
   text-decoration: none;
   cursor: pointer;
 }
+
 /* Modal Header */
 .modal-header {
   padding: 2px 16px;

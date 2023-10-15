@@ -1,9 +1,21 @@
+/* Resetting default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Container styles */
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
+  grid-template-rows: repeat(6, 1fr);
+  gap: 0;
   grid-template-areas:
     "header header header"
     "image image image"
@@ -12,59 +24,82 @@
     ". . ."
     "footer footer footer";
   background-color: #060ce9;
+  height: 100vh;
 }
 
+/* Header styles */
 .header {
   grid-area: header;
-  display: grid;
+  display: flex;
   justify-content: center;
-  display: grid;
-  border-style: solid;
-  border-color: #ffcc00;
-  border-width: 3px;
+  align-items: center;
+  border: 3px solid #ffcc00;
   background-color: #060ee9e3;
 }
 
+.header h1 {
+  color: #ffcc00;
+}
+
+/* Footer styles */
 .footer {
   grid-area: footer;
-  display: grid;
+  display: flex;
   justify-content: center;
-  border-style: solid;
-  border-color: #ffcc00;
-  border-width: 3px;
+  align-items: center;
+  border: 3px solid #ffcc00;
   background-color: #060ee9e3;
 }
 
-.image {
-  grid-area: image;
-  display: grid;
-  border-style: solid;
-  border-color: #ffcc00;
-  border-width: 2px;
-  justify-content: center;
+.footer h3 {
+  color: #ffcc00;
 }
 
+/* Image styles */
+.image {
+  grid-area: image;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ffcc00;
+}
+
+/* Play styles */
 .play {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". . ."
-    ". play-here ."
-    ". . .";
   grid-area: play;
+  display: grid;
+  place-items: center;
 }
 
 .play-here {
-  grid-area: play-here;
   display: grid;
+  grid-gap: 10px;
+  place-items: center;
 }
 
+/* Form styles */
+input[type="text"] {
+  padding: 5px;
+  border: 2px solid #ffcc00;
+  border-radius: 5px;
+}
+
+button#start-game-button {
+  background-color: #ffcc00;
+  color: #060ce9;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Text styles */
 h1,
 p,
 h3 {
   color: #ffcc00;
-  display: justify;
+  text-align: center;
+  font-weight: bold;
+  margin: 10px;
 }

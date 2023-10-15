@@ -1,8 +1,8 @@
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 0px 0px;
+  grid-template-rows: repeat(9, 1fr);
+  gap: 0;
   grid-auto-flow: row;
   grid-template-areas:
     "header header header"
@@ -17,33 +17,17 @@
   background-color: #060ee9cb;
 }
 
-.footer {
-  grid-area: footer;
+.footer,
+.header,
+.Player-turn,
+bet-here,
+final-answer,
+bet-amount,
+final-cat,
+final-question,
+Final-q {
   display: grid;
-  display: grid;
-  border-style: solid;
-  border-color: #ffcc00;
-  border-width: 2px;
-  justify-content: center;
-}
-
-.header {
-  grid-area: header;
-  display: grid;
-  display: grid;
-  border-style: solid;
-  border-color: #ffcc00;
-  border-width: 2px;
-  justify-content: center;
-}
-
-.Player-turn {
-  grid-area: Player-turn;
-  display: grid;
-  display: grid;
-  border-style: solid;
-  border-color: #ffcc00;
-  border-width: 2px;
+  border: 2px solid #ffcc00;
   justify-content: center;
 }
 
@@ -51,83 +35,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
+  gap: 0;
   grid-auto-flow: row;
   grid-template-areas:
     ". . ."
     ". bet-here ."
     ". . .";
   grid-area: bet;
-}
-
-.bet-here {
-  grid-area: bet-here;
-  display: grid;
-  display: grid;
-  border-style: solid;
-  border-color: #ffcc00;
-  border-width: 2px;
-  justify-content: center;
-}
-
-.final-answer {
-  grid-area: final-answer;
-  display: grid;
-  display: grid;
-  border-style: solid;
-  border-color: #ffcc00;
-  border-width: 2px;
-  justify-content: center;
-}
-
-.bet-amount {
-  grid-area: bet-amount;
-  display: grid;
-  display: grid;
-  border-style: solid;
-  border-color: #ffcc00;
-  border-width: 2px;
-  justify-content: center;
-}
-
-.final-cat {
-  grid-area: final-cat;
-  display: grid;
-  display: grid;
-  border-style: solid;
-  border-color: #ffcc00;
-  border-width: 2px;
-  justify-content: center;
-}
-
-.final-question {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". . ."
-    ". Final-q ."
-    ". . .";
-  grid-area: final-question;
-  display: grid;
-  display: grid;
-  border-style: solid;
-  border-color: #ffcc00;
-  border-width: 2px;
-  justify-content: center;
-}
-
-.Final-q {
-  grid-area: Final-q;
-
-  display: grid;
-  display: grid;
-  border-style: solid;
-  border-color: #ffcc00;
-  border-width: 2px;
-  justify-content: center;
 }
 
 h1,
