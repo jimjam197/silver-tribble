@@ -1,10 +1,3 @@
-// VITO
-// You will see some quotation marks like this: document.getElementById("finalRoundButton")? <-------
-// I have put them there just to avoid errors thrown in the console
-// Basically, what these quotation marks do is:
-// if the object is null, don't call the method
-// if it exists, call it
-
 import { qs } from "./rounds.js";
 
 //Shortcuts to session storage
@@ -252,4 +245,48 @@ document.getElementById("finalRoundButton")?.addEventListener("click", () => {
     document.getElementById("finalRoundButton").disabled = true;
     resetBoard();
   }
+
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const currentPlayerTurn = document.querySelector(".Player-turn p");
+  const finalCategory = document.querySelector(".final-cat p");
+  const finalQuestion = document.querySelector(".final-question p");
+  const finalAnswer = document.querySelector(".final-answer p");
+  const betAmount = document.querySelector(".bet-amount p");
+
+  // Set the current player's turn
+  currentPlayerTurn.textContent = `It's ${getCurrentPlayer()}'s turn`;
+
+  // Import the finalRoundQuestion object from rounds.js
+  const finalRoundQuestion = {
+    category: "Final",
+    question: "What was the ideal party based on in 2E?",
+    answer: "The Golden Girls",
+    bet: 0, // Initialize the bet to 0
+  };
+
+  // Set the final category and question from the finalRoundQuestion object
+  finalCategory.textContent = finalRoundQuestion.category;
+  finalQuestion.textContent = finalRoundQuestion.question;
+
+  
+  // Set the bet amount from the finalRoundQuestion object
+  betAmount.textContent = `Bet: $${finalRoundQuestion.bet}`;
+
+  // Add an event listener to the "Place Bet" button
+  const placeBetButton = document.getElementById("place-bet-button");
+  placeBetButton.addEventListener("click", function () {
+    // Get the bet amount from the input field
+    const betInput = document.getElementById("bet-amount"); // Updated ID here
+    const bet = parseInt(betInput.value, 10);
+
+    if (!isNaN(bet)) {
+      finalRoundQuestion.bet = bet; // Update the bet amount
+      betAmount.textContent = `Bet: $${finalRoundQuestion.bet}`;
+    } else {
+      alert("Invalid bet. Please enter a valid number.");
+    }
+  });
+
 });
