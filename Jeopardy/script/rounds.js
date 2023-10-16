@@ -5,6 +5,7 @@ export const qs = [
         category: "Classes and Races",
         question: "What race has a natural proficiency in archery?",
         answer: "Elf",
+        points: 100,
       },
       200: {
         category: "Classes and Races",
@@ -395,4 +396,3 @@ export const qs = [
     answer: "The Golden Girls",
   },
 ];
-

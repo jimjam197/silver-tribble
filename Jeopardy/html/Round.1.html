@@ -11,7 +11,7 @@
 
 <body>
 
-  <div class=" container">
+  <div class="container">
     <div class="header">
       <p>
       <h1>D&D Jeopardy Round <span id="round-num">1</span></h1>
@@ -20,15 +20,15 @@
 
     <div class="points-container">
       <div class="player-points">
-        <h2>Player 1 Points: <span id="player1-points">0</span></h2>
+        <h2><span id="player1-display"></span> Points: <span id="player1-points">0</span></h2>
       </div>
       <div class="player-points">
-        <h2>Player 2 Points: <span id="player2-points">0</span></h2>
+        <h2><span id="player2-display"></span> Points: <span id="player2-points">0</span></h2>
       </div>
     </div>
 
     <div class="turn-indicator">
-      <h2>Current Turn: <span id="current-turn">Player 1</span></h2>
+      <h2>Current Turn: <span id="current-turn"></span></h2>
     </div>
 
     <!--The grid of the board-->
@@ -379,7 +379,8 @@
   </div>
 
   <script src="../script/index.js" type="module"></script>
-  <script src="../script/rounds.js"></script>
+  <script src="../script/rounds.js" type="module"></script>
+  <!-- VITO Needed to add type="module" to script tag above -->
 
 </body>
 
