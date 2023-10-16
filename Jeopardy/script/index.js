@@ -77,9 +77,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const gridItem = document.querySelector(`.q.r${i}.c${j}`);
       gridItem?.addEventListener("click", () => {
         if (!selectedQuestions[i - 1][j - 1]) {
-          // selectedQuestions[i - 1][j - 1] = true;
           displayQuestion(i, j);
           selectedQuestions[i - 1][j - 1] = true;
+          gridItem.classList.add("selected"); // Add a class to mark selected questions
         }
       });
     }
@@ -90,6 +90,7 @@ function closeModal(modalId) {
   const modal = document.getElementById(modalId);
   modal.style.display = "none";
 }
+
 function displayQuestion(i, j) {
   if (selectedQuestions[i - 1][j - 1]) {
     return;
