@@ -1,4 +1,9 @@
-import { getPlayerXName, getPlayerXPoints, setCurrentPlayer, switchPlayer } from './index';
+import {
+  getPlayerXName,
+  getPlayerXPoints,
+  setCurrentPlayer,
+  switchPlayer,
+} from "./index";
 
 document.addEventListener("DOMContentLoaded", function () {
   // Initialize players' names and scores

@@ -125,12 +125,16 @@ function displayQuestion(i, j) {
         }
       }
 
-      document.getElementById("player1-points").textContent = getPlayerXPoints(1);
-      document.getElementById("player2-points").textContent = getPlayerXPoints(2);
+      document.getElementById("player1-points").textContent =
+        getPlayerXPoints(1);
+      document.getElementById("player2-points").textContent =
+        getPlayerXPoints(2);
 
       switchPlayer();
 
-      document.getElementById("current-turn").textContent = `It's ${getCurrentPlayer()}'s turn`;
+      document.getElementById(
+        "current-turn"
+      ).textContent = `It's ${getCurrentPlayer()}'s turn`;
 
       modal.style.display = "none";
       endRound();
@@ -139,7 +143,9 @@ function displayQuestion(i, j) {
 
       switchPlayer();
 
-      document.getElementById("current-turn").textContent = `It's ${getCurrentPlayer()}'s turn`;
+      document.getElementById(
+        "current-turn"
+      ).textContent = `It's ${getCurrentPlayer()}'s turn`;
     }
   };
 
