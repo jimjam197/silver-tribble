@@ -45,11 +45,10 @@ document.getElementById("start-game-button")?.addEventListener("click", () => {
   window.location.href = "Round.1.html";
 });
 
-// Only set the scoreboard if we are on a round page (contains div with class points-container)
 if (document.getElementsByClassName("points-container").length > 0) {
   document.getElementById(
     "current-turn"
-  ).textContent = `It's ${getCurrentPlayer()}'s turn`; // VITO had to change from current-turn-display to current-turn
+  ).textContent = `It's ${getCurrentPlayer()}'s turn`;
   document.getElementById("player1-display").textContent = getPlayerXName(1);
   document.getElementById("player2-display").textContent = getPlayerXName(2);
 }
@@ -238,55 +237,90 @@ document.getElementById("round2Button")?.addEventListener("click", () => {
   }
 });
 
-document.getElementById("finalRoundButton")?.addEventListener("click", () => {
-  if (currentRound === 2 && isBoardCleared()) {
-    currentRound = 3;
-    document.getElementById("round-num").textContent = currentRound;
-    document.getElementById("finalRoundButton").disabled = true;
-    resetBoard();
-  }
-
-});
-
 document.addEventListener("DOMContentLoaded", function () {
   const currentPlayerTurn = document.querySelector(".Player-turn p");
   const finalCategory = document.querySelector(".final-cat p");
-  const finalQuestion = document.querySelector(".final-question p");
-  const finalAnswer = document.querySelector(".final-answer p");
-  const betAmount = document.querySelector(".bet-amount p");
+  const finalQuestionButton = document.getElementById("show-answer-button"); // Update to select by ID
+  const finalAnswerElement = document.querySelector(".final-answer p");
+  const player1BetInput = document.getElementById("player1-bet-input");
+  const player2BetInput = document.getElementById("player2-bet-input");
+  const player1BetDisplay = document.getElementById("player1-bet-display");
+  const player2BetDisplay = document.getElementById("player2-bet-display");
+  const modal = document.getElementById("final-modal");
+  const modalContent = modal.querySelector(".modal-content");
+
+  // Initialize players' names and scores
+  const player1Name = getPlayerXName(1);
+  const player2Name = getPlayerXName(2);
+
+  let currentPlayer = player1Name
+    ? player1Name
+    : player2Name
+    ? player2Name
+    : "Player 1";
+
+  // Function to switch players
+  function switchPlayer() {
+    currentPlayer = currentPlayer === player1Name ? player2Name : player1Name;
+    currentPlayerTurn.textContent = `It's ${currentPlayer}'s turn`;
+  }
 
   // Set the current player's turn
-  currentPlayerTurn.textContent = `It's ${getCurrentPlayer()}'s turn`;
+  currentPlayerTurn.textContent = `It's ${currentPlayer}'s turn`;
 
   // Import the finalRoundQuestion object from rounds.js
   const finalRoundQuestion = {
     category: "Final",
     question: "What was the ideal party based on in 2E?",
     answer: "The Golden Girls",
-    bet: 0, // Initialize the bet to 0
+    player1Bet: 0,
+    player2Bet: 0,
   };
 
-  // Set the final category and question from the finalRoundQuestion object
-  finalCategory.textContent = finalRoundQuestion.category;
-  finalQuestion.textContent = finalRoundQuestion.question;
+  // Set the final question from the finalRoundQuestion object
+  finalQuestionButton.textContent = "Click to Reveal Final Question";
 
-  
-  // Set the bet amount from the finalRoundQuestion object
-  betAmount.textContent = `Bet: $${finalRoundQuestion.bet}`;
-
-  // Add an event listener to the "Place Bet" button
-  const placeBetButton = document.getElementById("place-bet-button");
+  // Add an event listener to the "Place Bets" button
+  const placeBetButton = document.getElementById("place-bets-button"); // Update to select by ID
   placeBetButton.addEventListener("click", function () {
-    // Get the bet amount from the input field
-    const betInput = document.getElementById("bet-amount"); // Updated ID here
-    const bet = parseInt(betInput.value, 10);
+    const player1Bet = parseInt(player1BetInput.value, 10);
+    const player2Bet = parseInt(player2BetInput.value, 10);
 
-    if (!isNaN(bet)) {
-      finalRoundQuestion.bet = bet; // Update the bet amount
-      betAmount.textContent = `Bet: $${finalRoundQuestion.bet}`;
+    if (!isNaN(player1Bet) && !isNaN(player2Bet)) {
+      finalRoundQuestion.player1Bet = player1Bet;
+      finalRoundQuestion.player2Bet = player2Bet;
+      updateBetDisplays();
+      showModal();
     } else {
-      alert("Invalid bet. Please enter a valid number.");
+      alert("Invalid bets. Please enter valid numbers for both players.");
     }
   });
 
+  function updateBetDisplays() {
+    player1BetDisplay.textContent = `${player1Name}'s Bet: $${finalRoundQuestion.player1Bet}`;
+    player2BetDisplay.textContent = `${player2Name}'s Bet: $${finalRoundQuestion.player2Bet}`;
+  }
+
+  function showModal() {
+    modal.style.display = "block"; // Display the modal
+  }
+
+  // Add an event listener to the "Click to Reveal Final Question" button
+  finalQuestionButton.addEventListener("click", function () {
+    finalQuestionButton.style.display = "none";
+    showFinalQuestion();
+  });
+
+  function showFinalQuestion() {
+    const questionText = document.createElement("p");
+    questionText.textContent = finalRoundQuestion.question;
+    modalContent.innerHTML = ""; // Clear previous content
+    modalContent.appendChild(questionText);
+  }
+
+  // Add an event listener to a button for showing the answer
+  const showAnswerButton = document.getElementById("show-answer-button"); // Update to select by ID
+  showAnswerButton.addEventListener("click", function () {
+    finalAnswerElement.textContent = `Answer: ${finalRoundQuestion.answer}`;
+  });
 });

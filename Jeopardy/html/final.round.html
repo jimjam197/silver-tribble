@@ -4,12 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../styles/styles.final .round.css"> 
+  <link rel="stylesheet" href="../styles/styles.final .round.css">
   <title>Final Round</title>
 </head>
-<body> <!-- Opening <body> tag was missing in your code -->
-
-  <!-- Correctly placed <script> tags -->
+<body>
   <script type="module" src="../script/index.js"></script>
   <script type="module" src="../script/rounds.js"></script>
 
@@ -36,14 +34,29 @@
       <p>final answer</p> 
     </div>
     <div class="bet-amount">
-      <p>Place your bet: <input type="number" id="bet-input" min="0" max="10000"></p>
-      <button id="place-bet-button">Place Bet</button>      
+      <p>
+        <span id="player1-bet-display"></span><br>
+        <span id="player2-bet-display"></span>
+      </p>
+      <input type="number" id="player1-bet-input" min="0" max="10000" placeholder="Enter Player 1's Bet">
+      <input type="number" id="player2-bet-input" min="0" max="10000" placeholder="Enter Player 2's Bet">
+      <button id="place-bets-button">Place Bets</button>
     </div>
     <div class="final-cat"> 
-      <p>Final Category</p> <!-- Corrected the text here -->
+      <p>Final Category</p>
     </div>
     <div class="final-question"> 
-      <p>Final Question</p> <!-- Corrected the text here -->
+      <p>Click to Reveal Final Question</p>
+      <button id="show-answer-button">Show Answer</button>
+    </div>
+  </div>
+
+  <div class="final-modal" id="final-modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('final-modal')">&times;</span>
+      <h2>Final Question</h2>
+      <p id="final-question">Final question will appear here</p>
+      <button id="show-answer-button">Show Answer</button>
     </div>
   </div>
 </body>
